@@ -1,0 +1,32 @@
+{
+  "version": "nvidia-free-prototype-2026-10-22",
+  "placeholder": false,
+  "free_prototype": true,
+  "checked_on": "2026-10-22",
+  "review_after": "2027-01-20",
+  "note": "BUDGETING RATES, NOT CHARGES. NVIDIA Build's hosted trial API for the listed NVIDIA models is described by NVIDIA as free for prototyping under the NVIDIA API Trial Terms of Service; availability, rate limits and terms can change and nothing here guarantees it stays free. The rates below are the PRD section 10.3 assumptions so that the cost caps, the startup call-graph check and the daily spend guard keep binding exactly as they would on a paid service. Estimated costs shown by the app are therefore notional. Live mode refuses this sheet after review_after: re-check NVIDIA's current terms and rates, then update both dates. search_per_call is a conservative Tavily upper bound that was not verified. The local Ollama models (qwen3-vl) cost nothing per call but are listed at the same budgeting rates so the caps and the startup check still bind.",
+  "safety_factor": 1.25,
+  "models": {
+    "nvidia/nemotron-3-ultra-550b-a55b": {
+      "in_per_m": 2.5,
+      "out_per_m": 10.0
+    },
+    "openai/gpt-oss-20b": {
+      "in_per_m": 0.3,
+      "out_per_m": 1.2
+    },
+    "qwen3-vl:8b-instruct": {
+      "in_per_m": 0.3,
+      "out_per_m": 1.2
+    },
+    "qwen3-vl:4b-instruct": {
+      "in_per_m": 0.3,
+      "out_per_m": 1.2
+    },
+    "google/gemma-4-31b-it": {
+      "in_per_m": 0.3,
+      "out_per_m": 1.2
+    }
+  },
+  "search_per_call": 0.016
+}

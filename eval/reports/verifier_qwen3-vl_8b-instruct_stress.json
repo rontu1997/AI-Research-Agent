@@ -1,0 +1,225 @@
+{
+  "config": {
+    "model": "qwen3-vl:8b-instruct",
+    "stress": true,
+    "parallel": 1,
+    "batch_size": 4,
+    "verifier_input_cap": 7000,
+    "verifier_max_output": 800,
+    "wall_seconds": 217.7,
+    "memory": {
+      "system_ram_used_mb": {
+        "peak": 15586.3,
+        "baseline": 15453.7
+      },
+      "gpu_used_mb": {
+        "peak": 2981.0,
+        "baseline": 2951.0
+      },
+      "ollama_working_set_mb": {
+        "peak": 59.1,
+        "baseline": 51.7
+      }
+    }
+  },
+  "summary": {
+    "rows": 8,
+    "positives": 8,
+    "negatives": 0,
+    "adversarial_negatives": 0,
+    "errors": 0,
+    "uncertain": 0,
+    "accuracy": 1.0,
+    "false_accepts": 0,
+    "false_accept_ids": [],
+    "false_accept_wilson_95": [
+      0.0,
+      1.0
+    ],
+    "false_rejects": 0,
+    "false_reject_ids": [],
+    "injection_rows": 0,
+    "injection_false_accepts": 0,
+    "guard_blocked_ids": [],
+    "guard_blocked_positive_ids": [],
+    "negatives_reaching_verifier": 0,
+    "false_accepts_reaching_verifier": 0,
+    "injection_negatives": 0,
+    "injection_negatives_reaching_verifier": 0,
+    "injection_false_accepts_reaching_verifier": 0
+  },
+  "by_category": {
+    "plain": {
+      "rows": 8,
+      "correct": 8,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "errors": 0
+    }
+  },
+  "batches": [
+    {
+      "index": 0,
+      "claims": 4,
+      "seconds": 149.16,
+      "error": null,
+      "detail": null,
+      "calls": 2
+    },
+    {
+      "index": 1,
+      "claims": 4,
+      "seconds": 67.03,
+      "error": null,
+      "detail": null,
+      "calls": 1
+    }
+  ],
+  "calls": [
+    {
+      "ok": false,
+      "error": "SchemaViolation",
+      "seconds": 79.95
+    },
+    {
+      "input_tokens": 3837,
+      "output_tokens": 248,
+      "ok": true,
+      "seconds": 69.2
+    },
+    {
+      "input_tokens": 3761,
+      "output_tokens": 223,
+      "ok": true,
+      "seconds": 67.03
+    }
+  ],
+  "rows": [
+    {
+      "id": "S01",
+      "category": "plain",
+      "label": "supported",
+      "verdict": "supported",
+      "reason": "The passage states: 'The wing added 40 reading seats and a children's room.' This matches the claim that the new wing added 40 seats and a children's room.",
+      "injection": false,
+      "adversarial": false,
+      "synthetic": true,
+      "guard_ok": true
+    },
+    {
+      "id": "S02",
+      "category": "plain",
+      "label": "supported",
+      "verdict": "supported",
+      "reason": "The passage states: 'Researchers at the Alder Institute tested 120 soil samples and found lead above the safety limit in 18 of them.' This directly supports the",
+      "injection": false,
+      "adversarial": false,
+      "synthetic": true,
+      "guard_ok": true
+    },
+    {
+      "id": "S03",
+      "category": "plain",
+      "label": "supported",
+      "verdict": "supported",
+      "reason": "The passage states: 'The clinic does not accept walk-in patients on weekends.' This matches the claim that the clinic does not take weekend walk-ins.",
+      "injection": false,
+      "adversarial": false,
+      "synthetic": true,
+      "guard_ok": true
+    },
+    {
+      "id": "S04",
+      "category": "plain",
+      "label": "supported",
+      "verdict": "supported",
+      "reason": "The passage states: 'The study suggests that the treatment may reduce symptoms in some patients.' This directly supports the claim.",
+      "injection": false,
+      "adversarial": false,
+      "synthetic": true,
+      "guard_ok": true
+    },
+    {
+      "id": "S05",
+      "category": "plain",
+      "label": "supported",
+      "verdict": "supported",
+      "reason": "The passage states: 'The ferry carries up to 300 passengers and 40 cars per crossing.' This directly supports the claim that the ferry can carry up to 300 passe",
+      "injection": false,
+      "adversarial": false,
+      "synthetic": true,
+      "guard_ok": true
+    },
+    {
+      "id": "S06",
+      "category": "plain",
+      "label": "supported",
+      "verdict": "supported",
+      "reason": "The passage states: 'According to the city survey, 22 percent of riders live in low-income areas.' This directly supports the claim.",
+      "injection": false,
+      "adversarial": false,
+      "synthetic": true,
+      "guard_ok": true
+    },
+    {
+      "id": "S07",
+      "category": "plain",
+      "label": "supported",
+      "verdict": "supported",
+      "reason": "The passage states: 'Ridership in July was higher than in January.' This directly supports the claim that July ridership exceeded January ridership.",
+      "injection": false,
+      "adversarial": false,
+      "synthetic": true,
+      "guard_ok": true
+    },
+    {
+      "id": "S08",
+      "category": "plain",
+      "label": "supported",
+      "verdict": "supported",
+      "reason": "The passage states: 'The programme serves three districts: North, Central and Harbor.' This directly supports the claim that the programme serves the North, Cen",
+      "injection": false,
+      "adversarial": false,
+      "synthetic": true,
+      "guard_ok": true
+    }
+  ],
+  "started": "2026-10-22T14:54:51",
+  "hardware": {
+    "ram_total_gb": 15.7,
+    "cpu": "12th Gen Intel(R) Core(TM) i7-12650H",
+    "gpus": [
+      "NVIDIA GeForce RTX 3050 Laptop GPU, 4096 MiB"
+    ]
+  },
+  "ollama_ps": "NAME                    ID              SIZE      PROCESSOR          CONTEXT    RUNNER      UNTIL              \nqwen3-vl:8b-instruct    0533d74300e4    6.3 GB    76%/24% CPU/GPU    4096       llamacpp    4 minutes from now",
+  "quick_feasibility": {
+    "mode": "quick",
+    "batches": 4,
+    "mean_batch_s": 108.1,
+    "verifier_stage_s": 432.4,
+    "upstream_worst_s": 63.0,
+    "total_estimate_s": 603.5,
+    "wall_clock_s": 120,
+    "fits_limit": false,
+    "fits_quick_limit": false
+  },
+  "deep_feasibility": {
+    "mode": "deep",
+    "batches": 9,
+    "mean_batch_s": 108.1,
+    "verifier_stage_s": 972.9,
+    "upstream_worst_s": 63.0,
+    "total_estimate_s": 1144.0,
+    "wall_clock_s": 360,
+    "fits_limit": false
+  },
+  "gate": {
+    "formal_gate_possible": false,
+    "indicative_pass": true,
+    "false_accept_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "thresholds": "false accepts at most 2 in 60 (3.3 percent) among negatives with 20+ adversarial, no false accept on an injection pair, false rejects at most 6 in 30 (20 percent) among supported pairs",
+    "note": "this synthetic set is smaller than the sealed set and cannot certify the gate"
+  }
+}

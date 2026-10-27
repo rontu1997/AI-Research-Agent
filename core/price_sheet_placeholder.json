@@ -1,0 +1,11 @@
+{
+  "version": "placeholder-1",
+  "placeholder": true,
+  "note": "Illustrative prices from PRD section 10.3. NOT real provider prices. Replace via PRICE_SHEET_PATH before any real use (task M0-07).",
+  "safety_factor": 1.25,
+  "models": {
+    "fake-writer": { "in_per_m": 2.5, "out_per_m": 10.0 },
+    "fake-verifier": { "in_per_m": 0.3, "out_per_m": 1.2 }
+  },
+  "search_per_call": 0.016
+}

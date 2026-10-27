@@ -1,0 +1,27 @@
+# Secrets and local state (rules.md §5)
+.env
+logs/
+state/
+eval-data/
+
+# Python / uv
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.import_linter_cache/
+.pytest-tmp/
+.superpowers/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store

@@ -1,0 +1,10 @@
+{
+  "version": "openai-gpt-6-luna-2026-10-25",
+  "placeholder": false,
+  "safety_factor": 1.25,
+  "models": {
+    "gpt-6-luna": { "in_per_m": 0.10, "out_per_m": 0.50 }
+  },
+  "search_per_call": 0.02,
+  "note": "OpenAI GPT-6 Luna standard text token rates checked 2026-10-25. Search reserve includes the $0.01 web search tool call and an allowance for search content tokens; actual usage may vary."
+}

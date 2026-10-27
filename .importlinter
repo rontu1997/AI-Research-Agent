@@ -1,0 +1,81 @@
+[importlinter]
+root_packages =
+    core
+    pipeline
+    adapters
+    ui
+include_external_packages = True
+
+[importlinter:contract:no-streamlit-below-ui]
+name = core, pipeline and adapters never import streamlit
+type = forbidden
+source_modules =
+    core
+    pipeline
+    adapters
+forbidden_modules =
+    streamlit
+
+[importlinter:contract:ui-imports-only-allowed-modules]
+name = ui reaches the engine only through run_manager, models, errors, settings and text_safety
+type = forbidden
+source_modules =
+    ui
+forbidden_modules =
+    pipeline
+    adapters
+    core.capacity
+    core.research_agent
+    core.telemetry
+    core.drain
+    core.status_rules
+    core.validation
+    core.tokens
+    core.demo
+
+[importlinter:contract:layers]
+name = ui > run_manager > research_agent > pipeline > adapters
+type = layers
+layers =
+    ui
+    core.run_manager
+    core.research_agent
+    pipeline
+    adapters
+exhaustive = False
+
+[importlinter:contract:pipeline-uses-adapter-protocols-only]
+name = pipeline reaches providers only through adapters.base
+type = forbidden
+source_modules =
+    pipeline
+forbidden_modules =
+    adapters.fakes
+    adapters.live
+
+[importlinter:contract:adapters-are-independent]
+name = adapters never import pipeline or the run machinery
+type = forbidden
+source_modules =
+    adapters
+forbidden_modules =
+    pipeline
+    core.run_manager
+    core.research_agent
+
+[importlinter:contract:models-perform-no-io]
+name = core.models performs no I/O
+type = forbidden
+source_modules =
+    core.models
+forbidden_modules =
+    os
+    pathlib
+    socket
+    subprocess
+    httpx
+    openai
+    anthropic
+    requests
+    sqlite3
+    streamlit
