@@ -4,6 +4,16 @@ An evidence-checked web research app. It searches public sources, drafts a repor
 against stored passages, and reviews each claim before publishing it. Reports can be completed,
 partial, or failed.
 
+## Get the repository
+
+This project is published at
+[github.com/rontu1997/AI-Research-Agent](https://github.com/rontu1997/AI-Research-Agent).
+
+```powershell
+git clone https://github.com/rontu1997/AI-Research-Agent.git
+cd AI-Research-Agent
+```
+
 ## Run with GPT-6 Luna
 
 Install [uv](https://docs.astral.sh/uv/), then:
@@ -15,9 +25,9 @@ uv sync
 uv run streamlit run app.py
 ```
 
-The shipped `.env` is configured for live OpenAI web search and `gpt-6-luna` for planning,
-writing, and review. **Only `OPENAI_API_KEY` needs editing.** The OpenAI key also pays for web
-search tool calls. The [GPT-6 Luna model page](https://developers.openai.com/api/docs/models/gpt-6-luna)
+The shipped `.env.example` is configured for live OpenAI web search and `gpt-6-luna` for
+planning, writing, and review. **Only `OPENAI_API_KEY` needs editing.** The OpenAI key also pays
+for web search tool calls. The [GPT-6 Luna model page](https://developers.openai.com/api/docs/models/gpt-6-luna)
 lists the API model ID; the [web search guide](https://developers.openai.com/api/docs/guides/tools-web-search)
 describes the Responses API search tool. `.env` is ignored by Git.
 
